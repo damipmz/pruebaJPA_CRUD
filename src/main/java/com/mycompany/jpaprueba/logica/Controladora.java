@@ -39,7 +39,7 @@ public class Controladora {
     }
     
     
-    //--CARRERA--
+    //-------CARRERA--------
     
        //CREATE
     //Creo los metodos para poder crear alumnos(registros)
@@ -61,7 +61,7 @@ public class Controladora {
     }
     
     //FUNCION PARA TRAER ALUMNO EN PARTICULAR
-    public Alumno traerCarrera(int id){  
+    public Carrera traerCarrera(int id){  
         return controlPersis.traerCarrera(id);
     }
     
