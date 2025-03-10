@@ -1,6 +1,7 @@
 package com.mycompany.jpaprueba.persistencia;
 
 import com.mycompany.jpaprueba.logica.Alumno;
+import com.mycompany.jpaprueba.logica.Carrera;
 import com.mycompany.jpaprueba.persistencia.exceptions.NonexistentEntityException;
 import java.util.ArrayList;
 import java.util.List;
@@ -13,6 +14,7 @@ public class ControladoraPersistencia {
     //Cuando llame a este new para crear una nueva instancia
     //Llamo a la instancia del controlle que hice 
     AlumnoJpaController aluJpa = new AlumnoJpaController();
+    CarreraJpaController carreJpa = new CarreraJpaController();
 
     //CREAR
     public void crearAlumno(Alumno alu) {
@@ -47,6 +49,42 @@ public class ControladoraPersistencia {
         ArrayList <Alumno> listaAlumnos = new ArrayList <Alumno> (listita); 
         
         return listaAlumnos;
+    }
+
+    
+    //----CARRERA----
+    
+    public void eliminarCarrera(int id) {
+        try {
+            carreJpa.destroy(id);
+        } catch (NonexistentEntityException ex) {
+            Logger.getLogger(ControladoraPersistencia.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
+    }
+
+    public void crearCarrera(Carrera Carre) {
+        carreJpa.create(Carre);
+    }
+
+    public void editarCarrera(Carrera Carre) {
+        try {
+            carreJpa.edit(Carre);
+        } catch (Exception ex) {
+            Logger.getLogger(ControladoraPersistencia.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+
+    public Carrera traerCarrera(int id) {
+        return carreJpa.findCarrera(id);
+    }
+
+    public ArrayList<Carrera> traerListaCarreras() {
+        
+        List <Carrera> listaCarr = carreJpa.findCarreraEntities(); //Creo lista de tipo CARRERA
+        ArrayList <Carrera> listaCarreras = new ArrayList <> (listaCarr); 
+        
+        return listaCarreras;
     }
     
     

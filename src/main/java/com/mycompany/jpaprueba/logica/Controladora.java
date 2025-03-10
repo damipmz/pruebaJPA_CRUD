@@ -39,5 +39,36 @@ public class Controladora {
     }
     
     
+    //--CARRERA--
+    
+       //CREATE
+    //Creo los metodos para poder crear alumnos(registros)
+    public void crearCarrera(Carrera Carre){ //Asi lo hago si recibo de la IGU un alumno
+        
+        controlPersis.crearCarrera (Carre);
+    }
+    
+    //DELETE
+    public void eliminarCarrera(int id){
+        
+        controlPersis.eliminarCarrera(id);
+        
+    }
+    
+    //EDITAR
+    public void editarCarrera(Carrera Carre){
+        controlPersis.editarCarrera(Carre);
+    }
+    
+    //FUNCION PARA TRAER ALUMNO EN PARTICULAR
+    public Alumno traerCarrera(int id){  
+        return controlPersis.traerCarrera(id);
+    }
+    
+    public ArrayList <Carrera> traerListaCarreras(){
+        return controlPersis.traerListaCarreras();
+    }
+    
+    
   
 }
