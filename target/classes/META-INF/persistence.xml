@@ -3,6 +3,7 @@
   <persistence-unit name="pruebaJPAPU" transaction-type="RESOURCE_LOCAL">
     <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
     <class>com.mycompany.jpaprueba.logica.Alumno</class>
+    <class>com.mycompany.jpaprueba.logica.Carrera</class>
     <properties>
       <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/pruebajpa?serverTimezone=UTC"/>
       <property name="javax.persistence.jdbc.user" value="root"/>
