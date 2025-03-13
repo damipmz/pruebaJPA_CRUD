@@ -1,13 +1,14 @@
 package com.mycompany.jpaprueba.logica;
 
 
+//import java.io.Serializable;
 import java.io.Serializable;
-import java.util.LinkedList;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.OneToMany;
+import javax.persistence.ManyToOne;
+
 
 @Entity
 public class Materia implements Serializable {
@@ -16,25 +17,26 @@ public class Materia implements Serializable {
     @GeneratedValue(strategy=GenerationType.SEQUENCE)
     private int id;
     private String nombre;
-    @OneToMany
     private String tipo; //Cuatrimestral/Trimestral..
     
-    private LinkedList<Materia> listaMaterias;
+    @ManyToOne
+    private Carrera carre;//Relacion con la carrera
 
     public Materia() {
     }
 
-    public Materia(int id, String nombre, String tipo) {
+    public Materia(int id, String nombre, String tipo, Carrera carre) {
         this.id = id;
         this.nombre = nombre;
         this.tipo = tipo;
+        this.carre = carre;
     }
 
-    public Materia(LinkedList<Materia> listaMaterias) {
-        this.listaMaterias = listaMaterias;
-    }
+
     
-    
+
+
+
 
     public int getId() {
         return id;
@@ -59,7 +61,20 @@ public class Materia implements Serializable {
     public void setTipo(String tipo) {
         this.tipo = tipo;
     }
-    
-    
+
+    public Carrera getCarre() {
+        return carre;
+    }
+
+    public void setCarre(Carrera carre) {
+        this.carre = carre;
+    }
+
     
 }
+
+   
+    
+
+  
+ 

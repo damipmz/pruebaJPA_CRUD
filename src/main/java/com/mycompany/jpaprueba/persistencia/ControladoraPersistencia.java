@@ -118,6 +118,10 @@ public class ControladoraPersistencia {
     public void crearMateria(Materia mate) {
         mateJpa.create(mate);
     }
+
+    public LinkedList<Materia> traerListaMaterias() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
     
     
     

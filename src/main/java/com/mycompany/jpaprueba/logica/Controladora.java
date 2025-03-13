@@ -91,7 +91,7 @@ public class Controladora {
     }
     
     //FUNCION PARA TRAER ALUMNO EN PARTICULAR
-    public Carrera traerMateria(int id){  
+    public Materia traerMateria(int id){  
         return controlPersis.traerMateria(id);
     }
     
