@@ -1,0 +1,35 @@
+[33mcommit 2cf29d4c35fa7aa14063e583a5a9263a0c9ba45b[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m
+Author: damipmz <damianponce97@gmail.com>
+Date:   Mon Mar 10 20:34:01 2025 -0300
+
+    import sin usar borrado
+
+[33mcommit b667a276619f6c0ad99eea82748099133385ec68[m
+Author: damipmz <damianponce97@gmail.com>
+Date:   Mon Mar 10 20:30:35 2025 -0300
+
+    arreglos en el onetoone
+
+[33mcommit d4530288b2634755cd8819e9306a53529cf1d2b7[m
+Author: damipmz <damianponce97@gmail.com>
+Date:   Mon Mar 10 20:10:48 2025 -0300
+
+    probando OneToOne carrera y alumno
+
+[33mcommit 3f67cb5bde7ffd697176279664c2f8fa34a46b78[m
+Author: damipmz <damianponce97@gmail.com>
+Date:   Mon Mar 10 20:01:29 2025 -0300
+
+    CRUDs para carreras
+
+[33mcommit f7859a543d008cac4cb26816f5a20de9b6f15d11[m
+Author: damipmz <damianponce97@gmail.com>
+Date:   Mon Mar 10 19:40:25 2025 -0300
+
+    Agregando controladores de Carrera para alumnos
+
+[33mcommit 37ef564680cef1b78800dedde5171acb78543d75[m
+Author: damipmz <damianponce97@gmail.com>
+Date:   Mon Mar 10 15:18:30 2025 -0300
+
+    first commit

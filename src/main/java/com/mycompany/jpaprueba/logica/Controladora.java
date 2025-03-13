@@ -2,6 +2,7 @@ package com.mycompany.jpaprueba.logica;
 
 import com.mycompany.jpaprueba.persistencia.ControladoraPersistencia;
 import java.util.ArrayList;
+import java.util.LinkedList;
 
 
 public class Controladora {
@@ -39,10 +40,10 @@ public class Controladora {
     }
     
     
-    //-------CARRERA--------
+    //------------------------CARRERA-------------------------
     
        //CREATE
-    //Creo los metodos para poder crear alumnos(registros)
+    //Creo los metodos para poder crear carreras
     public void crearCarrera(Carrera Carre){ //Asi lo hago si recibo de la IGU un alumno
         
         controlPersis.crearCarrera (Carre);
@@ -67,6 +68,35 @@ public class Controladora {
     
     public ArrayList <Carrera> traerListaCarreras(){
         return controlPersis.traerListaCarreras();
+    }
+    
+    //-------------------MATERIA-------------------
+      //CREATE
+    //Creo los metodos para poder crear Materia
+    public void crearMateria(Materia mate){ //Asi lo hago si recibo de la IGU un alumno
+        
+        controlPersis.crearMateria(mate);
+    }
+    
+    //DELETE
+    public void eliminarMateria(int id){
+        
+        controlPersis.eliminarMateria(id);
+        
+    }
+    
+    //EDITAR
+    public void editarMateria(Materia mate){
+        controlPersis.editarMateria(mate);
+    }
+    
+    //FUNCION PARA TRAER ALUMNO EN PARTICULAR
+    public Carrera traerMateria(int id){  
+        return controlPersis.traerMateria(id);
+    }
+    
+    public LinkedList<Materia> traerListaMaterias(){
+        return controlPersis.traerListaMaterias();
     }
     
     
