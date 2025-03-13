@@ -18,7 +18,7 @@ Este proyecto es un prototipo de sistema de administración universitaria desarr
 - **IDE:** NetBeans
 
 ## Instalación y Uso
-1. Clonar el repositorio:
+- Clonar el repositorio:
    ```sh
    git clone https://github.com/tu-usuario/tu-repositorio.git
 
