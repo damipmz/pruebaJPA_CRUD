@@ -22,7 +22,8 @@ Este proyecto es un prototipo de sistema de administración universitaria desarr
    ```sh
    git clone https://github.com/tu-usuario/tu-repositorio.git
 
-   Contribución
+
+###Contribución
 Si deseas contribuir, por favor sigue estos pasos:
 
 1. Haz un fork del repositorio.
