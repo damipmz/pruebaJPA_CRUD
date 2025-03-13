@@ -2,8 +2,10 @@ package com.mycompany.jpaprueba.persistencia;
 
 import com.mycompany.jpaprueba.logica.Alumno;
 import com.mycompany.jpaprueba.logica.Carrera;
+import com.mycompany.jpaprueba.logica.Materia;
 import com.mycompany.jpaprueba.persistencia.exceptions.NonexistentEntityException;
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -15,7 +17,10 @@ public class ControladoraPersistencia {
     //Llamo a la instancia del controlle que hice 
     AlumnoJpaController aluJpa = new AlumnoJpaController();
     CarreraJpaController carreJpa = new CarreraJpaController();
+    MateriaJpaController mateJpa = new MateriaJpaController();
 
+    
+    //----------------ALUMNO---------------------
     //CREAR
     public void crearAlumno(Alumno alu) {
         aluJpa.create(alu);
@@ -52,7 +57,7 @@ public class ControladoraPersistencia {
     }
 
     
-    //----CARRERA----
+    //----------------CARRERA-----------------------
     
     public void eliminarCarrera(int id) {
         try {
@@ -85,6 +90,33 @@ public class ControladoraPersistencia {
         ArrayList <Carrera> listaCarreras = new ArrayList <> (listaCarr); 
         
         return listaCarreras;
+    }
+    
+    //--------------MATERIA-------------
+
+    public Materia traerMateria(int id) {
+        return mateJpa.findMateria(id);
+    }
+
+    public LinkedList<Materia> traerListaMaterias(int id) {
+        List<Materia> lista = mateJpa.findMateriaEntities();
+        LinkedList<Materia> listaMaterias = new LinkedList(lista);
+        return listaMaterias;
+    }
+
+    public void editarMateria(Materia mate) {
+    }
+
+    public void eliminarMateria(int id) {
+        try {
+            mateJpa.destroy(id);
+        } catch (NonexistentEntityException ex) {
+            Logger.getLogger(ControladoraPersistencia.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+
+    public void crearMateria(Materia mate) {
+        mateJpa.create(mate);
     }
     
     
